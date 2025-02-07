@@ -1,0 +1,22 @@
+name: Test Self-Hosted Runner
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  test-runner:
+    runs-on: [self-hosted, Linux, X64]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Print System Info
+        run: |
+          echo "✅ Runner is working!"
+          uname -a
+          whoami
+          df -h
