@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-qr-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-qr
+  template:
+    metadata:
+      labels:
+        app: devops-qr
+    spec:
+      containers:
+        - name: devops-qr
+          image: joelmlsp/devops-qr-app:v1
+          ports:
+            - containerPort: 80
+
