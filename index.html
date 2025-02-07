@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect with Me on LinkedIn! </title>
+    <title>  Connect with Me on LinkedIn! </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <style>
         body {
@@ -98,104 +97,3 @@
         }
     });
 </script>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect with Me on LinkedIn! 🚀</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 50px;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        h1 {
-            color: #0077b5;
-        }
-        canvas {
-            margin-top: 15px;
-        }
-        p {
-            font-size: 18px;
-            color: #333;
-        }
-        .btn {
-            display: inline-block;
-            background: #0077b5;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background: #005582;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>🚀 Let's Connect on LinkedIn! 🚀</h1>
-        <p>Scan the QR Code below to visit my LinkedIn profile:</p>
-        <canvas id="qrcode"></canvas>
-        <br>
-        <a class="btn" id="linkedin-link" href="#" target="_blank">Visit My LinkedIn</a>
-    </div>
-
-    <script>
-        
-        var linkedinURL = "https://www.linkedin.com/in/joel-elaziz/";
-
-        
-        var qr = new QRious({
-            element: document.getElementById('qrcode'),
-            value: linkedinURL,
-            size: 200
-        });
-
-        
-        document.getElementById('linkedin-link').href = linkedinURL;
-    </script>
-
-</body>
-</html>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        console.log("Script Loaded");
-        
-        var linkedinURL = "https://www.linkedin.com/in/joel-elaziz/";
-        console.log("LinkedIn URL:", linkedinURL);
-        
-        var canvas = document.getElementById('qrcode');
-        if (canvas) {
-            var qr = new QRious({
-                element: canvas,
-                value: linkedinURL,
-                size: 200
-            });
-        } else {
-            console.error("QR Code canvas not found!");
-        }
-
-        var link = document.getElementById('linkedin-link');
-        if (link) {
-            link.href = linkedinURL;
-        } else {
-            console.error("LinkedIn button not found!");
-        }
-    });
-</script>
->>>>>>> f596b82 (Initial commit -Added github actions workflow)
