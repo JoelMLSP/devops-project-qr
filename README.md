@@ -23,14 +23,20 @@ This project showcases a **fully automated DevOps pipeline** where a simple **QR
 📌 Project Architecture
 (Insert a diagram showing the Proxmox VM, GitHub Actions runner, Docker container, and K3s deployment)  
 
+![image](https://github.com/user-attachments/assets/2e51b371-6480-4414-acd2-ae3357b6d446)
+
+
+![image](https://github.com/user-attachments/assets/cae8bbf7-36d5-4e6b-a1a5-fc20738e4702)
+
 ---
 
 ## **🛠️ Setup Guide – Deploying the Project**
 
-### **1️⃣ Step 1: Setting Up the Proxmox Debian VM**
-1. **Install Debian on a Proxmox VM**.
-2. **Assign a Static IP (e.g., ``)**.
-3. **Enable SSH & Install Dependencies**:
+### **1️⃣ Step 1: Install Dependencies on the Debian VM**
+1. **Update the system and install required tools**:
    ```bash
    sudo apt update && sudo apt upgrade -y
    sudo apt install curl git nano docker.io -y
+
+2. Start and enable Docker:
+
