@@ -7,11 +7,17 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Linux, X64]
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+
+      - name: Fix K3s Permissions for GitHub Actions
+        run: |
+          sudo chown $USER /etc/rancher/k3s/k3s.yaml
+          sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+          export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
       - name: Build Docker Image
         run: |
@@ -22,4 +28,9 @@ jobs:
         run: |
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
+
+      - name: Verify Deployment
+        run: |
+          kubectl get pods
+          kubectl get services
 
