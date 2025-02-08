@@ -209,9 +209,9 @@ kubectl get nodes
    kubectl get svc
    ```
 
-4. **Access the app via the NodePort**
+4. **Access the app via the NodePort below or whatever port you choose within the range**
    ```bash
-   curl http://<your-server-ip>:30080
+   curl http://<your-server-ip>:30080 
    ```
 
 **Example of App Running in Kubernetes:**  
